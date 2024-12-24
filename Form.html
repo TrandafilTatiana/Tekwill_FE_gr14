@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <fieldset>
+        <legend>Basic User Information:</legend>
+        <label for="name">Full name:</label>
+        <input id="name" type="text" required />
+        <br />
+        <label for="email">Email:</label>
+        <input id="email" type="email" required />
+        <br />
+        <label for="pwd">Password:</label>
+        <input id="pwd" type="password" required />
+        <label for="Confpwd">Confirm Password:</label>
+        <input id="Confpwd" type="password" />
+        <br />
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+
+        <br />
+        <label for="birthday">Date of Birth:</label>
+        <input type="date" id="birthday" name="birthday" />
+      </fieldset>
+
+      <fieldset>
+        <legend>Address Information:</legend>
+        <label for="stradr">Street Address:</label>
+        <textarea name="message" id="stradr"> </textarea>
+        <br />
+        <label for="country">Country:</label>
+        <select name="country" id="country">
+          <option value="USA">USA</option>
+          <option value="Moldova">Moldova</option>
+          <option value="Romania">Romania</option>
+          <option value="Turkey">Turkey</option>
+          <option value="Russia">Russia</option>
+        </select>
+        <br />
+        <label for="city">City:</label>
+        <input id="city" type="text" />
+        <br />
+        <label for="postc">Postal code:</label>
+        <input id="postc" type="number" />
+      </fieldset>
+      <fieldset>
+        <legend>Preferences:</legend>
+        <label>Preferred Contact Method:</label>
+        <input id="mail" type="checkbox" />
+        <label for="mail">Email</label>
+        <input id="phone" type="checkbox" />
+        <label for="phone">Phone</label>
+        <input id="postal" type="checkbox" />
+        <label for="postal">Postal Mail</label>
+        <br />
+        <label for="color">Favorite Color:</label>
+        <input id="color" type="color" />
+      </fieldset>
+      <fieldset>
+        <legend>Additional Details:</legend>
+        <label for="aboutus">How did you hear about us?</label>
+        <select name="country" id="aboutus">
+          <option value="internet">Internet</option>
+          <option value="friends">Friends</option>
+          <option value="advertising">Advertising</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select>
+        <br />
+        <label for="feedback">Feedback/Comments:</label>
+        <textarea name="message" id="feedback"> </textarea>
+      </fieldset>
+      <fieldset>
+        <legend>Profile:</legend>
+        <label for="picture">Upload a Profile Picture:</label>
+        <input type="file" id="picture" accept=".jpg, .png" />
+        <br />
+        <label for="website">Website URL:</label><br />
+        <input type="url" id="website" name="website" />
+        <br />
+
+        <label for="experience">Experience Level with HTML:</label>
+        <input type="range" id="experience" name="experience" min="1" max="10"
+        value="1" oninput=displayValue.value=`${experience.value}/10` />
+        <output id="displayValue">1/10</output>
+      </fieldset>
+      <input type="submit" />
+      <input type="reset" />
+    </form>
+  </body>
+</html>
