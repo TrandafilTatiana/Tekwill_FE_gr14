@@ -88,11 +88,17 @@
         <label for="website">Website URL:</label><br />
         <input type="url" id="website" name="website" />
         <br />
-
         <label for="experience">Experience Level with HTML:</label>
-        <input type="range" id="experience" name="experience" min="1" max="10"
-        value="1" oninput=displayValue.value=`${experience.value}/10` />
-        <output id="displayValue">1/10</output>
+        <input
+          type="range"
+          id="experience"
+          name="experience"
+          min="1/10"
+          max="10/10"
+          value="1/10"
+          oninput="displayValue.value=experience.value"
+        />
+        <output id="displayValue">3/10</output>
       </fieldset>
       <input type="submit" />
       <input type="reset" />
