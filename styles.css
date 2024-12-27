@@ -1,0 +1,11 @@
+#heading1 {
+  color: blue;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+p {
+  color: yellow;
+}
+.pink {
+  color: pink;
+}

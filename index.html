@@ -4,9 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Basic Language of the Web: HTML</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .send-mess {
+        color: white;
+        background-color: blue;
+      }
+    </style>
   </head>
-  <body>
-    <h1>📘 The Code Magazine</h1>
+  <body style="background-color: grey">
+    <button style="position: fixed; bottom: 0" class="send-mess">
+      Send message
+    </button>
+    <h1 id="heading1">📘 The Code Magazine</h1>
 
     <h2>The Basic Language of the Web: HTML</h2>
     <img
@@ -15,7 +25,9 @@
       style="width: 8%; height: 10%"
     />
 
-    <p>Posted by <strong>Laura Jones </strong> on Monday, June 21st 2027</p>
+    <p class="pink">
+      Posted by <strong>Laura Jones </strong> on Monday, June 21st 2027
+    </p>
     <img
       src="img/post-img.jpg"
       alt="just code photo"
