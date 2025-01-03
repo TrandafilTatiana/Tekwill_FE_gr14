@@ -9,3 +9,79 @@ p {
 .pink {
   color: pink;
 }
+.color {
+  display: block;
+}
+.color:hover {
+  color: blue;
+}
+div {
+  font-size: 22px;
+}
+h2:first-of-type {
+  color: seagreen;
+}
+ol li:nth-child(even) {
+  color: magenta;
+}
+ul:last-of-type li:nth-last-child(2) {
+  color: yellowgreen;
+}
+html {
+  font-size: 16px;
+}
+h1 {
+  font-size: 3rem;
+  background-color: rgba(255, 0, 0, 0.5);
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+p {
+  font-size: 1.2em;
+}
+nav {
+  background-color: rgb(53, 50, 50);
+  padding: 20px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+}
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+.home::before {
+  content: "🌏";
+  margin-right: 8px;
+}
+.about::before {
+  content: "💢";
+  margin-right: 8px;
+}
+.catalog::before {
+  content: "✍";
+  margin-right: 8px;
+}
+.contacts::before {
+  content: "☎";
+  margin-right: 8px;
+  color: red;
+}
+nav a:hover {
+  background-color: grey;
+  border-radius: 4px;
+}
+nav a::after {
+  content: "✨";
+  margin-left: 8px;
+  color: gold;
+}
+.code {
+  width: calc(50vw + 150px;)
+}
