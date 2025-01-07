@@ -1,0 +1,33 @@
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 10vh;
+  margin: 0;
+}
+h1 {
+  text-align: center;
+  font-size: 64px;
+  color: #030303;
+  text-shadow: 5px 5px 9px rgba(94, 93, 44, 0.9), -5px -5px 9px rgba(192, 96, 61, 0.9);;
+  margin-bottom: 105px;
+}
+div.content {
+  width: 150px;
+  height: 150px;
+  padding: 0;
+  background-color: rgb(206, 194, 194);
+  border: 90px solid white;
+  border-radius: 50%;
+  outline-style: solid;
+  outline-color: rgb(169, 159, 159);
+  outline-width: 44px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  box-shadow: 1px 5px 15px 30px rgb(130, 131, 132) inset;
+}
+div.container {
+  box-shadow: 1px 5px 90px 70px rgb(130, 131, 132);
+  border-radius: 50%;
+}

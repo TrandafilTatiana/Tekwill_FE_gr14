@@ -56,19 +56,19 @@ nav ul li {
   display: inline;
   margin-right: 20px;
 }
-.home::before {
+nav a.home::before {
   content: "🌏";
   margin-right: 8px;
 }
-.about::before {
+nav a.about::before {
   content: "💢";
   margin-right: 8px;
 }
-.catalog::before {
+nav a.catalog::before {
   content: "✍";
   margin-right: 8px;
 }
-.contacts::before {
+nav a.contacts::before {
   content: "☎";
   margin-right: 8px;
   color: red;
