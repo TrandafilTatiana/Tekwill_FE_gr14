@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agu+Display&family=Major+Mono+Display&display=swap" rel="stylesheet">  
+    <style>
+      .flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 100px;
+      }
+      .left {
+        text-align: left;       
+        display: flex;
+        gap: 2px;
+      }             
+      .right {
+        display: flex;
+        gap: 20px;
+      }
+      header {
+        font-family: "Major Mono Display", serif;
+        font-weight: 400;
+        font-style: normal;
+        background: rgb(177, 186, 190);
+        color: rgb(87, 94, 224);
+        position: sticky;
+        top: 0;
+        width: 100%;
+        z-index: 2;
+      }
+      nav ul {
+        list-style: none;
+      }
+      nav ul li a {
+        color: rgb(56, 79, 110);
+        text-decoration: none;
+        font-size: 30px;
+        padding-top: 60px;
+        display: flex;
+      }
+      nav ul li a:hover {
+        color: rgb(30, 17, 220);
+      }
+      .underline:hover {
+        text-decoration: underline; 
+      }
+      .parent {
+        position: relative;
+      }
+      .child {
+        display: none;
+        position: absolute;
+        top: 100%; 
+        left: 0; 
+        background-color: rgb(177, 186, 190);
+        padding: 10px 0;
+        border-radius: 5px;
+        min-width: 150px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      }
+      .child a {
+        color: #0e205a;
+        padding: 15px 5px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+        width: 220px;
+        font-size: large;
+      }
+      .parent:hover .child {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="flex">
+          <ul class="left">
+            <li><img src="assets/img/Gr14.png" alt="logo" width="160"></img> </li>
+          </ul>
+          <ul class="right">
+            <li><a href="#" class="underline">Home</a></li>
+              <div class="parent">
+                <li><a href="#">Services</a></li>
+                  <div class="child">
+                    <a href="#">Web Design</a>
+                    <a href="#">Graphic Design</a>
+                    <a href="#">SEO</a>
+                  </div>
+              </div>
+              <div class="parent">
+                <li><a href="#" >Products</a></li>
+                  <div class="child">
+                    <a href="#">Product 1</a>
+                    <a href="#">Product 2</a>
+                    <a href="#">Product 3</a>
+                  </div>
+              </div>
+                <li><a href="#" class="underline">About</a></li>
+          </ul>
+        </nav>
+    </header>
+  </body>
+</html>
