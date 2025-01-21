@@ -33,7 +33,7 @@
           opacity: 1;
         }
       }
-      .tttgeneral {
+      .tooltiptext {
         visibility: hidden;
         opacity: 0;
         transition: opacity 1s ease, visibility 1s ease;
@@ -44,88 +44,77 @@
         position: absolute;
         z-index: 1;
       }
-      .tooltip1 .tooltiptext1 {
+      .tooltip1 .tooltiptext {
         top: 50%;
         width: 120px;
         padding: 5px 10px;
         left: 0;
         transform: translate(-15%, -140%);
       }
-      .tooltip1:hover .tooltiptext1 {
+      .tooltip1:hover .tooltiptext,
+      .tooltip2:hover .tooltiptext,
+      .tooltip3:hover .tooltiptext,
+      .tooltip4:hover .tooltiptext {
         visibility: visible;
         opacity: 1;
       }
-      .tooltip1 .tooltiptext1::after {
+      .tooltip1 .tooltiptext::after,
+      .tooltip2 .tooltiptext::after,
+      .tooltip3 .tooltiptext::after,
+      .tooltip4 .tooltiptext::after {
         content: " ";
         position: absolute;
-        top: 100%;
-        left: 50%;
+      }
+      .tooltip1 .tooltiptext::after,
+      .tooltip3 .tooltiptext::after {
         border-left: 10px solid transparent;
         border-right: 10px solid transparent;
-        border-top: 10px solid gray;
         transform: translateX(-50%);
       }
-      .tooltip2 .tooltiptext2 {
+      .tooltip1 .tooltiptext::after {
+        top: 100%;
+        left: 50%;
+        border-top: 10px solid gray;
+      }
+      .tooltip2 .tooltiptext {
         top: -50%;
         width: 120px;
         padding: 9px;
         left: 0;
         transform: translateX(77%);
       }
-      .tooltip2:hover .tooltiptext2 {
-        visibility: visible;
-        opacity: 1;
-      }
-      .tooltip2 .tooltiptext2::after {
-        content: " ";
-        position: absolute;
+      .tooltip2 .tooltiptext::after,
+      .tooltip4 .tooltiptext::after {
         top: 50%;
-        left: -10px;
         border-bottom: 10px solid transparent;
-        border-right: 10px solid gray;
         border-top: 10px solid transparent;
         transform: translateY(-50%);
       }
-      .tooltip3 .tooltiptext3 {
+      .tooltip2 .tooltiptext::after {
+        left: -10px;
+        border-right: 10px solid gray;
+      }
+      .tooltip3 .tooltiptext {
         top: 110%;
         width: 110px;
         padding: 10px 20px;
         left: 50%;
         transform: translateX(-50%);
       }
-      .tooltip3:hover .tooltiptext3 {
-        visibility: visible;
-        opacity: 1;
-      }
-      .tooltip3 .tooltiptext3::after {
-        content: " ";
-        position: absolute;
+      .tooltip3 .tooltiptext::after {
         top: -10%;
         left: 80px;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
         border-bottom: 10px solid gray;
-        transform: translateX(-50%);
       }
-      .tooltip4 .tooltiptext4 {
+      .tooltip4 .tooltiptext {
         transform: translateY(-50%);
         top: 50%;
         right: 109%;
         width: 120px;
         padding: 9px;
       }
-      .tooltip4:hover .tooltiptext4 {
-        visibility: visible;
-        opacity: 1;
-      }
-      .tooltip4 .tooltiptext4::after {
-        content: " ";
-        position: absolute;
-        top: 50%;
+      .tooltip4 .tooltiptext::after {
         left: 100%;
-        transform: translateY(-50%);
-        border-top: 10px solid transparent;
-        border-bottom: 10px solid transparent;
         border-left: 10px solid gray;
       }
     </style>
@@ -145,25 +134,25 @@
     <div class="container_blue">
       <div class="trigger tooltip1">
         Trigger top
-        <span class="tooltiptext1 tttgeneral">
+        <span class="tooltiptext">
           Hello I am the best of the best tooltips
         </span>
       </div>
       <div class="trigger tooltip2">
         Trigger right
-        <span class="tooltiptext2 tttgeneral">
+        <span class="tooltiptext">
           Hello I am the best of the best tooltips
         </span>
       </div>
       <div class="trigger tooltip3">
         Trigger bottom
-        <span class="tooltiptext3 tttgeneral">
+        <span class="tooltiptext">
           Hello I am the best of the best tooltips
         </span>
       </div>
       <div class="trigger tooltip4">
         Trigger left
-        <span class="tooltiptext4 tttgeneral">
+        <span class="tooltiptext">
           Hello I am the best of the best tooltips
         </span>
       </div>
