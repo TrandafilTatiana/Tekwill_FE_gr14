@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tooltips</title>
+    <style>
+      .container_blue {
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        padding: 20px;
+        background-color: white;
+        border: 5px solid blue;
+        width: 90%;
+        opacity: 0;
+        animation: slideIn 1s forwards 1s;
+      }
+      .tooltip {
+        background-color: white;
+        padding: 10px;
+        border: 2px solid red;
+        position: relative;
+        display: inline-block;
+      }
+      @keyframes slideIn {
+        0% {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        100% {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+      .tooltiptext {
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s ease, visibility 1s ease;
+        background-color: gray;
+        color: black;
+        text-align: center;
+        border-radius: 9px;
+        position: absolute;
+        z-index: 1;
+        width: 120px;
+        padding: 9px;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+      }
+      .tooltip .tooltiptext::after {
+        content: " ";
+        position: absolute;
+      }
+      .tooltip1 .tooltiptext {
+        top: -210%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .tooltip1 .tooltiptext::after,
+      .tooltip3 .tooltiptext::after {
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        transform: translateX(-50%);
+      }
+      .tooltip1 .tooltiptext::after {
+        top: 100%;
+        left: 50%;
+        border-top: 10px solid gray;
+      }
+      .tooltip2 .tooltiptext {
+        top: 50%;
+        left: 107%;
+        transform: translateY(-50%);
+      }
+      .tooltip2 .tooltiptext::after,
+      .tooltip4 .tooltiptext::after {
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        transform: translateY(-50%);
+      }
+      .tooltip2 .tooltiptext::after {
+        left: -10px;
+        top: 50%;
+        border-right: 10px solid gray;
+      }
+      .tooltip3 .tooltiptext {
+        top: 115%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .tooltip3 .tooltiptext::after {
+        top: -10%;
+        left: 50%;
+        border-bottom: 10px solid gray;
+      }
+      .tooltip4 .tooltiptext {
+        top: 50%;
+        right: 109%;
+        transform: translateY(-50%);
+      }
+      .tooltip4 .tooltiptext::after {
+        top: 50%;
+        left: 100%;
+        border-left: 10px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, perferendis!
+      Repudiandae deleniti, nostrum blanditiis impedit laudantium, numquam atque
+      itaque illo facere odio ut tempore quibusdam obcaecati, recusandae minus
+      corporis rem!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam voluptatum
+      nemo quo ullam deleniti rem maiores a dolor maxime praesentium minus earum
+      optio sapiente voluptatibus facere, blanditiis ea tempore facilis!
+    </p>
+    <div class="container_blue">
+      <div class="tooltip tooltip1">
+        Trigger top
+        <span class="tooltiptext">
+          Hello I am the best of the best tooltips
+        </span>
+      </div>
+      <div class="tooltip tooltip2">
+        Trigger right
+        <span class="tooltiptext">
+          Hello I am the best of the best tooltips
+        </span>
+      </div>
+      <div class="tooltip tooltip3">
+        Trigger bottom
+        <span class="tooltiptext">
+          Hello I am the best of the best tooltips
+        </span>
+      </div>
+      <div class="tooltip tooltip4">
+        Trigger left
+        <span class="tooltiptext">
+          Hello I am the best of the best tooltips
+        </span>
+      </div>
+    </div>
+  </body>
+</html>
