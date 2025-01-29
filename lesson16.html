@@ -79,13 +79,19 @@
         position: relative;
         display: inline-block;
       }
-      .overlay {
+      .container1 {
+        grid-column: span 2;
+        grid-row: span 2;
+        /*height: 100%;*/
+        height: 409px;
+      }
+      .text_container {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        opacity: 0; 
+        opacity: 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -93,15 +99,15 @@
       }
       .text {
         color: white;
-        background-color: rgba(0, 0, 0, 0.5); 
-        font-size: 24px; 
-        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 24px;
+        top: 10px;
       }
-      .container:hover .overlay {
-        opacity: 1; 
+      .container1:hover .text_container {
+        opacity: 1;
       }
+
       .kitten {
-       
         width: 100%;
         height: 200px;
         margin: 0;
@@ -147,8 +153,6 @@
         gap: 9px;
       }
       .puppy {
-
-        width: 150px;
         height: 200px;
         margin: 0;
         object-fit: cover;
@@ -174,23 +178,21 @@
         <a class="left_link" href="#">FEEDBACK</a>
       </aside>
       <main class="main_container">
-      
-
-        <div class="container">
+        <div class="container1">
           <img
             class="kitten kitten1"
             src="./assets/img/1-min.jpeg"
             alt="kitten-1"
           />
-            <div class="overlay">
-              <p class="text">Meow!</p>  
-            </div>
-         </div>
-          <img
-            class="kitten kitten2"
-            src="./assets/img/2-min.jpeg"
-            alt="kitten-2"
-          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <img
+          class="kitten kitten2"
+          src="./assets/img/2-min.jpeg"
+          alt="kitten-2"
+        />
 
         <img
           class="kitten kitten3"
@@ -221,14 +223,12 @@
           src="./assets/img/7-min.jpg"
           alt="kitten-7"
         />
-       
-          <img
-            class="kitten kitten8"
-            src="./assets/img/8-min.jpg"
-            alt="kitten-8"
-          />
-         
-        </div>
+
+        <img
+          class="kitten kitten8"
+          src="./assets/img/8-min.jpg"
+          alt="kitten-8"
+        />
       </main>
       <aside class="right_sidebar">
         <img class="puppy" src="./assets/img/9.webp" alt="puppy-1" />
