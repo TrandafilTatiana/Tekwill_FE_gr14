@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @font-face {
+        font-family: "barlow";
+        src: url("./assets/fonts/barlow.ttf") format("truetype");
+        font-weight: normal;
+      }
+      @font-face {
+        font-family: "barlow_bold";
+        src: url("./assets/fonts/barlow_bold.ttf") format("truetype");
+        font-weight: bold;
+      }
+      body {
+        font-family: "barlow", sans-serif;
+        background-color: rgb(199, 211, 217);
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        height: 100vh;
+      }
+      .page_container {
+        display: grid;
+        gap: 9px;
+        grid-template-columns: 100px 1fr 150px;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+          "header header header"
+          "left_sidebar main right_sidebar"
+          "left_sidebar footer footer";
+      }
+      .header {
+        grid-area: header;
+        grid-column: 1/4;
+      }
+      .nav {
+        font-family: "barlow_bold", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 9px;
+        gap: 21px;
+      }
+      .nav_link {
+        color: rgb(61, 139, 180);
+        font-size: 29px;
+      }
+      .nav_link:hover {
+        color: red;
+      }
+      .left_sidebar {
+        grid-area: left_sidebar;
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        gap: 9px;
+      }
+      .left_link {
+        color: rgb(61, 139, 180);
+        font-size: 21px;
+        text-decoration: none;
+      }
+      .left_link:hover {
+        color: red;
+      }
+      .main_container {
+        grid-area: main;
+        display: grid;
+        gap: 9px;
+        grid-template-columns: repeat(3, 1fr);
+        /*grid-template-rows: repeat(4, 0.5fr);*/
+       grid-template-rows: repeat(4, 200px);
+       
+      }
+     
+
+      
+    
+
+      
+       
+
+
+
+      .kitten {
+        width: 100%;
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+      }
+
+      .kitten1 {
+        grid-column: span 2;
+        grid-row: span 2;
+        /*height: 100%;*/
+        height: 409px;
+      }
+      .kitten3 {
+        grid-column: 1/2;
+        grid-row: 4/5;
+      }
+      .kitten4 {
+        grid-column: 2/3;
+        grid-row: 4/5;
+      }
+      .kitten5 {
+        grid-column: 3/4;
+        grid-row: 2/4;
+        height: 409px;
+      }
+      .kitten6 {
+        grid-column: 1/2;
+        grid-row: 3/4;
+      }
+      .kitten7 {
+        grid-column: 2/3;
+        grid-row: 3/4;
+      }
+      .kitten8 {
+        grid-column: 3/4;
+        grid-row: 4/5;
+      }
+      .right_sidebar {
+        grid-area: right_sidebar;
+        display: flex;
+        flex-direction: column;
+        padding: 9px;
+        gap: 9px;
+      }
+      .puppy {
+        height: 200px;
+        margin: 0;
+        object-fit: cover;
+      }
+      .footer {
+        grid-area: footer;
+         display: flex;
+        padding: 9px;
+        gap: 21px;
+         font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page_container">
+      <header class="header">
+        <nav class="nav">
+          <a class="nav_link" href="#">Home</a>
+          <a class="nav_link" href="#">About</a>
+          <a class="nav_link" href="#">Contact</a>
+        </nav>
+      </header>
+      <aside class="left_sidebar">
+        <a class="left_link" href="#">PRODUCTS</a>
+        <a class="left_link" href="#">SERVICES</a>
+        <a class="left_link" href="#">USERS</a>
+        <a class="left_link" href="#">FEEDBACK</a>
+      </aside>
+      <main class="main_container">
+       
+          <img
+            class="kitten kitten1"
+            src="./assets/img/1-min.jpeg"
+            alt="kitten-1"
+          />
+        
+          <img
+            class="kitten kitten2"
+            src="./assets/img/2-min.jpeg"
+            alt="kitten-2"
+          />
+     
+          <img
+          class="kitten kitten3"
+          src="./assets/img/3-min.jpeg"
+          alt="kitten-3"
+        />
+        
+          <img
+          class="kitten kitten4"
+          src="./assets/img/4-min.jpg"
+          alt="kitten-4"
+        />
+         
+          <img
+          class="kitten kitten5"
+          src="./assets/img/5-min.jpg"
+          alt="kitten-5"
+        />
+          
+          <img
+          class="kitten kitten6"
+          src="./assets/img/6-min.jpg"
+          alt="kitten-6"
+        />
+          
+         <img
+          class="kitten kitten7"
+          src="./assets/img/7-min.jpg"
+          alt="kitten-7"
+        />
+        
+         <img
+          class="kitten kitten8"
+          src="./assets/img/8-min.jpg"
+          alt="kitten-8"
+        />
+          
+        
+
+        
+      </main>
+      <aside class="right_sidebar">
+        <img class="puppy" src="./assets/img/9.webp" alt="puppy-1" />
+        <img class="puppy" src="./assets/img/10.webp" alt="puppy-2" />
+        <img class="puppy" src="./assets/img/11.jpg" alt="puppy-3" />
+        <img class="puppy" src="./assets/img/12.jpeg" alt="puppy-4" />
+      </aside>
+      <footer class="footer">
+        <span>© 2024 Grid&Flexbox</span>
+        <span>Layout creating lesson</span>
+      </footer>
+    </div>
+  </body>
+</html>

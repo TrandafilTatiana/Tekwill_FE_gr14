@@ -17,8 +17,8 @@
       }
       body {
         font-family: "barlow", sans-serif;
-        background-color: rgb(199, 211, 217);
-        padding: 0;
+        background-color: rgb(61, 139, 180);
+        padding: 9px;
         margin: 0;
         box-sizing: border-box;
         height: 100vh;
@@ -34,6 +34,7 @@
           "left_sidebar footer footer";
       }
       .header {
+        background-color: rgb(199, 211, 217);
         grid-area: header;
         grid-column: 1/4;
       }
@@ -53,6 +54,7 @@
         color: red;
       }
       .left_sidebar {
+        background-color: rgb(199, 211, 217);
         grid-area: left_sidebar;
         display: flex;
         flex-direction: column;
@@ -68,56 +70,56 @@
         color: red;
       }
       .main_container {
+        background-color: rgb(199, 211, 217);
         grid-area: main;
         display: grid;
         gap: 9px;
+        padding: 9px;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(4, 0.5fr);
-        width: 100%;
+        grid-template-rows: repeat(4, 200px);
       }
       .container {
         position: relative;
-        display: inline-block;
+      }
+      .container:hover .text_container {
+        opacity: 1;
       }
       .container1 {
         grid-column: span 2;
         grid-row: span 2;
-        /*height: 100%;*/
-        height: 409px;
       }
       .text_container {
         position: absolute;
-        top: 0;
+        bottom: 0;
         left: 0;
         width: 100%;
-        height: 100%;
         opacity: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: opacity 0.3s;
       }
       .text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
         color: white;
         background-color: rgba(0, 0, 0, 0.5);
         font-size: 24px;
-        top: 10px;
+        padding: 21px;
+        margin: 0;
       }
-      .container1:hover .text_container {
-        opacity: 1;
+      .container5 {
+        grid-column: 3/4;
+        grid-row: 2/4;
+        height: 409px;
       }
-
       .kitten {
         width: 100%;
         height: 200px;
         margin: 0;
         object-fit: cover;
       }
-
       .kitten1 {
         grid-column: span 2;
         grid-row: span 2;
-        /*height: 100%;*/
         height: 409px;
       }
       .kitten3 {
@@ -146,19 +148,61 @@
         grid-row: 4/5;
       }
       .right_sidebar {
+        background-color: rgb(199, 211, 217);
         grid-area: right_sidebar;
         display: flex;
         flex-direction: column;
         padding: 9px;
         gap: 9px;
+        margin: 0;
+      }
+      .puppy-container {
+        position: relative;
+        height: auto;
+        width: 132px;
       }
       .puppy {
-        height: 200px;
+        height: auto;
+        width: 132px;
         margin: 0;
-        object-fit: cover;
+        transition: opacity 0.3s ease;
+      }
+      .puppy-text-container {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 132px;
+        height: 100%;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: black;
+        margin: 0;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 21px;
+        font-weight: bold;
+      }
+      .puppy-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.6);
+        color: black;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+        width: 150px;
+        height: 100%;
+      }
+      .puppy-container:hover .puppy-text-container {
+        opacity: 1;
       }
       .footer {
+        background-color: rgb(199, 211, 217);
         grid-area: footer;
+        display: flex;
+        padding: 9px;
+        gap: 21px;
+        font-size: 20px;
       }
     </style>
   </head>
@@ -178,7 +222,7 @@
         <a class="left_link" href="#">FEEDBACK</a>
       </aside>
       <main class="main_container">
-        <div class="container1">
+        <div class="container container1">
           <img
             class="kitten kitten1"
             src="./assets/img/1-min.jpeg"
@@ -188,53 +232,102 @@
             <p class="text">Meow!</p>
           </div>
         </div>
-        <img
-          class="kitten kitten2"
-          src="./assets/img/2-min.jpeg"
-          alt="kitten-2"
-        />
-
-        <img
-          class="kitten kitten3"
-          src="./assets/img/3-min.jpeg"
-          alt="kitten-3"
-        />
-
-        <img
-          class="kitten kitten4"
-          src="./assets/img/4-min.jpg"
-          alt="kitten-4"
-        />
-
-        <img
-          class="kitten kitten5"
-          src="./assets/img/5-min.jpg"
-          alt="kitten-5"
-        />
-
-        <img
-          class="kitten kitten6"
-          src="./assets/img/6-min.jpg"
-          alt="kitten-6"
-        />
-
-        <img
-          class="kitten kitten7"
-          src="./assets/img/7-min.jpg"
-          alt="kitten-7"
-        />
-
-        <img
-          class="kitten kitten8"
-          src="./assets/img/8-min.jpg"
-          alt="kitten-8"
-        />
+        <div class="container">
+          <img
+            class="kitten kitten2"
+            src="./assets/img/2-min.jpeg"
+            alt="kitten-2"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container">
+          <img
+            class="kitten kitten3"
+            src="./assets/img/3-min.jpeg"
+            alt="kitten-3"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container">
+          <img
+            class="kitten kitten4"
+            src="./assets/img/4-min.jpg"
+            alt="kitten-4"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container container5">
+          <img
+            class="kitten kitten5"
+            src="./assets/img/5-min.jpg"
+            alt="kitten-5"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container">
+          <img
+            class="kitten kitten6"
+            src="./assets/img/6-min.jpg"
+            alt="kitten-6"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container">
+          <img
+            class="kitten kitten7"
+            src="./assets/img/7-min.jpg"
+            alt="kitten-7"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
+        <div class="container">
+          <img
+            class="kitten kitten8"
+            src="./assets/img/8-min.jpg"
+            alt="kitten-8"
+          />
+          <div class="text_container">
+            <p class="text">Meow!</p>
+          </div>
+        </div>
       </main>
       <aside class="right_sidebar">
-        <img class="puppy" src="./assets/img/9.webp" alt="puppy-1" />
-        <img class="puppy" src="./assets/img/10.webp" alt="puppy-2" />
-        <img class="puppy" src="./assets/img/11.jpg" alt="puppy-3" />
-        <img class="puppy" src="./assets/img/12.jpeg" alt="puppy-4" />
+        <div class="puppy-container">
+          <img class="puppy" src="./assets/img/9.webp" alt="puppy-1" />
+          <div class="puppy-text-container">
+            <p class="puppy-text">Woof!</p>
+          </div>
+        </div>
+        <div class="puppy-container">
+          <img class="puppy" src="./assets/img/10.webp" alt="puppy-2" />
+          <div class="puppy-text-container">
+            <p class="puppy-text">Woof!</p>
+          </div>
+        </div>
+        <div class="puppy-container">
+          <img class="puppy" src="./assets/img/11.jpg" alt="puppy-3" />
+          <div class="puppy-text-container">
+            <p class="puppy-text">Woof!</p>
+          </div>
+        </div>
+        <div class="puppy-container">
+          <img class="puppy" src="./assets/img/12.jpeg" alt="puppy-4" />
+          <div class="puppy-text-container">
+            <p class="puppy-text">Woof!</p>
+          </div>
+        </div>
       </aside>
       <footer class="footer">
         <span>© 2024 Grid&Flexbox</span>
