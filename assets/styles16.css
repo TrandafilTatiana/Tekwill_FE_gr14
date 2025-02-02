@@ -85,19 +85,19 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  margin: 0;
   width: 100%;
   opacity: 0;
   transition: opacity 0.3s;
-}
-.kitten__text {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: white;
   background-color: rgba(0, 0, 0, 0.5);
+}
+.kitten__text {
   font-size: 24px;
-  padding: 21px;
-  margin: 0;
+  color: white;
+  padding: 0 21px;
 }
 .kitten5 {
   grid-column: 3/4;
@@ -140,27 +140,22 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
   width: 132px;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
-  color: black;
-  margin: 0;
-  opacity: 0;
   transition: opacity 0.3s ease;
-  font-size: 21px;
   font-weight: bold;
-}
-.puppy__text {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.6);*/
+}
+.puppy__text {
   color: black;
-  font-size: 24px;
-  padding: 0;
-  margin: 0;
-  width: 132px;
-  height: 100%;
+  font-size: 21px;
 }
 .puppy:hover .puppy__text-container {
   opacity: 1;
