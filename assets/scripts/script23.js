@@ -110,3 +110,12 @@ calculatedDogAge(1);
 calculatedDogAge(2);
 calculatedDogAge(4);
 calculatedDogAge(3, 9); //changed dogAgeConversation coefficient;
+
+const calculationSupply = (currentAge, dailyFood, maxAge = 100) => {
+  const remainingYears = maxAge - currentAge;
+  const totalFood = remainingYears * dailyFood * 365;
+  console.log(`Вам понадобится ${totalFood} кг еды, чтобы продержаться до глубокой старости ${maxAge} лет.`);
+}
+calculationSupply(30, 1);
+calculationSupply(39, 0.7);
+calculationSupply(70, 0.5, 99); //changed maxAge from 100 to 99 years.
