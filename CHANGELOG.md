@@ -1,0 +1,30 @@
+- Merge pull request #8 from TrandafilTatiana/lesson14
+- lesson14 changes2
+- lesson14 changes
+- lesson14
+- Merge pull request #7 from TrandafilTatiana/lesson13
+- lesson13_changes
+- lesson13
+- Merge pull request #6 from TrandafilTatiana/lesson11
+- lesson11 changes
+- lesson11
+- Merge pull request #5 from TrandafilTatiana/lesson10
+- lesson10
+- Merge pull request #4 from TrandafilTatiana/Lesson9
+- .DS_Store banished!
+- selectors
+- Merge pull request #3 from TrandafilTatiana/Lesson7
+- outputChange
+- output
+- changed range
+- Lesson7
+- Merge pull request #2 from TrandafilTatiana/html-basics
+- letter L isn
+- Web page 19.12
+- Merge pull request #1 from TrandafilTatiana/feature
+- File structure
+- Useful links
+- How to use
+- Description
+- Tekwill-academy generalization
+- Initial commit
