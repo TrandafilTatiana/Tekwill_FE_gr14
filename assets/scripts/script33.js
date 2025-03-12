@@ -46,10 +46,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
       commentsContainer.innerHTML = "";
       comments.forEach((comment) => {
-        const paragraph = document.createElement('p');
+        const paragraph = document.createElement("p");
         paragraph.textContent = comment.body;
-        commentsContainer.appendChild(paragraph); 
+        commentsContainer.appendChild(paragraph);
       });
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+
+  // number 6
+
+  fetch("https://restcountries.com/v3.1/all")
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Failed to fetch countries");
+      }
+
+      return response.json();
+    })
+    .then((countries) => {
+      const country = countries[28];
+      console.log(country);
+      const name = country.name.common;
+      const population = country.population;
+      const currency = Object.values(country.currencies)[0].name;
+      const flag = country.flags.svg;
+      document.getElementById("name").textContent = `Name: ${name}`;
+      document.getElementById(
+        "population"
+      ).textContent = `Population: ${population}`;
+      document.getElementById("currency").textContent = `Currency: ${currency}`;
+      document.getElementById("flag").src = flag;
     })
     .catch((error) => {
       console.log(error);
